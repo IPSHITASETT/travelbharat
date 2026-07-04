@@ -1,0 +1,148 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-transparent {
+  background: transparent;
+}
+
+.navbar-solid {
+  background: var(--navy);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-icon { font-size: 1.4rem; }
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+}
+
+.logo-accent { color: var(--saffron); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: white;
+  background: rgba(255,255,255,0.1);
+}
+
+.nav-links a.active {
+  color: var(--saffron);
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.nav-search:focus-within {
+  background: rgba(255,255,255,0.2);
+  border-color: var(--saffron);
+}
+
+.nav-search input {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  width: 200px;
+}
+
+.nav-search input::placeholder { color: rgba(255,255,255,0.5); }
+
+.nav-search button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 1rem;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: auto;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .nav-search { display: none; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    flex-direction: column;
+    padding: 16px;
+    gap: 4px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 12px 16px; }
+}

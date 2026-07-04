@@ -1,0 +1,57 @@
+.states-page {
+  min-height: 100vh;
+  padding-top: 68px;
+}
+
+.india-map-hint {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--saffron-pale);
+  border-left: 4px solid var(--saffron);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  margin-bottom: 36px;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.india-map-hint span { font-size: 1.5rem; }
+
+.more-states-notice {
+  margin-top: 60px;
+  background: var(--navy);
+  color: white;
+  border-radius: var(--radius);
+  padding: 36px 40px;
+  text-align: center;
+}
+
+.more-states-notice h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.more-states-notice p {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.coming-soon-states {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.coming-state-tag {
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.7);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  border: 1px solid rgba(255,255,255,0.15);
+}

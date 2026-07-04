@@ -1,0 +1,81 @@
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.7);
+  padding: 60px 0 0;
+  margin-top: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.footer-logo span { color: var(--saffron); }
+
+.footer-brand p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: rgba(255,255,255,0.5);
+}
+
+.footer-flag {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 60px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.flag-saffron { flex: 1; background: #FF9933; }
+.flag-white { flex: 1; background: white; color: #000080; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+.flag-green { flex: 1; background: #138808; }
+
+.footer-section h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--saffron);
+  margin-bottom: 16px;
+}
+
+.footer-section a {
+  display: block;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+
+.footer-section a:hover { color: white; }
+
+.footer-bottom {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.4);
+}
+
+.footer-bottom p { margin-bottom: 4px; }
+
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+}
